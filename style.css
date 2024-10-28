@@ -233,9 +233,6 @@ nav a:hover{
     box-shadow: 1px 3px 20px #01299f, 1px 1px 40px #01299f
 }
 .services-list div h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
@@ -250,7 +247,7 @@ nav a:hover{
     font-size: 14px;
     margin-top: 30px;
     display: flex;
-    width: 60%;
+    /* width: 60%; */
     align-items: center;
     justify-content: center;
     padding: 12px 20px;
@@ -689,17 +686,20 @@ nav a:hover{
 
 @media (max-width:575px) {
         .image-container, .image-container img{
-        width:  150px;
-        height: 150px;
+        width:  200px;
+        height: 200px;
     }
-   
-    .header-container .nav a{
+    nav {
         display: none;
     }
+   
     .img-con{
         margin-top: 30px;
         justify-content: center;
     }
+    header{height: 60px;}
+    .header-container h1{font-size: 25px;}
+
     .home-section, .about-section, .services-section, .skill-section,.portfolio-section, .contact-section{
         padding: 5px 5%;
     }
@@ -707,16 +707,17 @@ nav a:hover{
         display: block;
     }
     .services-content h1, .skill-section h1, .main-text h2, .contact-text h1, .about-content h2{
-        font-size: 25px;
-        padding-bottom: 40px;
+        font-size: 30px;
+        padding-bottom: 50px;
     }
    
     .contact-text h1{ padding-bottom: 10px;}
+    .home{margin-top: 50px;}
     .home-container h3{font-size: 14px;}
     .home-container h1{font-size: 30px;}
     .home-container p{font-size: 12px; padding-top: 8px;}
-    .home-sci a{width: 30px; height: 30px; margin-top: 10px; margin-bottom: 12px;}
-    .btn-box{padding: 8px 10px; font-size: 10px; font-weight: 200;}
+    .home-sci a{width: 30px; height: 30px; margin-top: 10px; margin-bottom: 20px;}
+    .btn-box{padding: 10px 15px; font-size: 12px;}
 
     .about-content h2, .contact-text h1{padding-bottom: 0;}
     .about-content h4{font-size: 14px; margin: 8px 0 0 0;}
@@ -724,24 +725,32 @@ nav a:hover{
     .about-contents{display: block; }
     .about-con2{display: none;}
 
+    .services-list .fa-code{font-size: 25px; margin-bottom: 15px;}
     .services-list{display: block;}
     .services-list div{padding: 20px; margin-bottom: 10px;}
-    .services-list div p {font-size: 8px;}
-    .services-list div h2 {font-size: 12px;}
+    .services-list div p {font-size: 10px; line-height: 15px;}
+    .services-list div h2 {font-size: 20px;}
     .services-list div .read, .contact-form .send{        
-        font-size: 8px;
-        padding: 6px 10px;
+        font-size: 12px;
+        padding: 10px 10px;
         margin-top: 20px;
     }
 
-    .portfolio-content{ gap: 10px;}
-    .layer{padding:  0 15px ;}
-    .layer h5{font-size: 12px; margin-bottom: 5px; padding-top: 6px;}
-    .layer p{font-size: 8px; margin-top: 5px;}
-    .layer a{font-size:6px; width: 30px; height: 30px; margin-top: 4px; margin-bottom: 5px;}
+   
+    #skills{display: block;}
+    .skill-content{padding: 0;}
+    .skill-content .technical-bar{margin-bottom: 50px;}
+
+    .portfolio-content{display: block;}
+    .row:hover{transform: scale(1);}
+    .row{margin-bottom: 25px;}
+    .layer h5{font-size: 25px;}
+    .layer p{font-size: 12px; margin-top: 5px;}
+    .layer a{ width: 50px; height: 50px; margin-bottom: 10px; margin-top: 4px;}
+    .layer a i{font-size: 16px; padding: 10px; color: #008b8b;}
 
     #contact{display: block;}
-    .contact-text h4{ font-size: 15px; margin: 20px 0;}
+    .contact-text h4{ font-size: 18px; margin: 20px 0;}
     .contact-text p{ font-size: 10px; line-height: 20px;}
     .contact-list{ margin-bottom: 2rem;}
     .contact-list a{font-size: 14px;}
@@ -749,7 +758,7 @@ nav a:hover{
 
 
 }   
-@media (min-width:576px) and (max-width:768px) {
+@media (min-width:576px) and (max-width:767px) {
     nav{
         display: none;
     }
@@ -777,9 +786,11 @@ nav a:hover{
     .about-content h4{font-size: 14px; margin: 8px 0 0 0;}
     .about-content p{font-size: 10px; margin-bottom: 20px; }
 
-    .services-list div{padding: 8px;}
-    .services-list div p {font-size: 8px;}
-    .services-list div h2 {font-size: 12px;}
+    .services-list{grid-gap: 20px;}
+    .services-list .fa-code{font-size: 30px; margin-bottom: 20px;}
+    .services-list div{padding: 10px;}
+    .services-list div p {font-size: 12px;}
+    .services-list div h2 {font-size: 18px;}
     .services-list div .read, .contact-form .send{
         font-size: 8px;
         padding: 6px 10px;
@@ -787,12 +798,12 @@ nav a:hover{
     }
 
     .portfolio-content{ gap: 10px;}
-    .layer{padding:  0 15px ;}
+    .portfolio-content .layer{padding:  0 15px ;}
     .layer h5{font-size: 12px; margin-bottom: 5px; padding-top: 6px;}
     .layer p{font-size: 8px; margin-top: 5px;}
-    .layer a{font-size:6px; width: 30px; height: 30px; margin-top: 4px; margin-bottom: 5px;}
+    .layer a{font-size:6px; width: 30px; height: 30px; margin-bottom: 5px;}
 
-    .contact-text h4{ font-size: 15px; margin: 20px 0;}
+    .contact-text h5{ font-size: 15px; margin: 20px 0;}
     .contact-text p{ font-size: 10px; line-height: 20px;}
     .contact-list{ margin-bottom: 2rem;}
     .contact-list a{font-size: 14px;}
@@ -827,6 +838,10 @@ nav a:hover{
     .services-list{
         grid-gap: 20px;
     }
+    
+
+    .services-list{grid-gap: 20px;}
+    .services-list .fa-code{font-size: 30px; margin-bottom: 20px;}
     .services-list div{padding: 20px;}
     .services-list div p {font-size: 12px;}
     .services-list div h2 {font-size: 20px;}
@@ -837,6 +852,13 @@ nav a:hover{
     .portfolio-content{
         gap: 20px;
     }
+
+
+    .portfolio-content{ gap: 10px;}
+    .portfolio-content .layer{padding:  0 15px ;}
+    .layer h5{font-size: 20px; margin-bottom: 5px; padding-top: 6px;}
+    .layer p{font-size: 10px; margin-top: 5px;}
+    .layer a{font-size:10px; width: 30px; height: 30px; margin-bottom: 5px;}
 
 }   
 
@@ -860,7 +882,28 @@ nav a:hover{
 .services-list{
     grid-gap: 30px;
 }
+
+
+.services-list{grid-gap: 20px;}
+.services-list .fa-code{font-size: 40px; margin-bottom: 25px;}
+.services-list div{padding: 20px;}
+.services-list div p {font-size: 12px;}
+.services-list div h2 {font-size: 25px;}
+
+.portfolio-content{ gap: 20px;}
+    .portfolio-content .layer{padding:  0 15px ;}
+    .layer h5{font-size: 25px; margin-bottom: 5px; padding-top: 6px;}
+    .layer p{font-size: 14px; margin-top: 5px;}
+    .layer a{font-size:18px; width: 60px; height: 60px; margin-bottom: 5px;}
 }
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1450px) {
     .header-container, .home-section, .about-section, .skill-section, .services-section, .portfolio-section, .contact-section{
           width: 1440px;
