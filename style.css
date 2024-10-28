@@ -286,6 +286,9 @@ nav a:hover{
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
 }
+.technical-bar{
+    width: 100%;
+}
 .bar{
     font-size: 20px;
     margin-bottom: 20px;
@@ -492,19 +495,18 @@ nav a:hover{
     color: #000;
     font-size: 25px;
     font-weight: 600;
-    padding-top: 10px;
-    margin-bottom: 15px;
+    padding-top: 8px;
+    margin-bottom: 5px;
 }
 .layer p{
     color: #000;
-    margin-top: 20px;
     font-size: 16px;
     width: 100%;
 }
 .layer a{
-    color: #ff044f;
-    margin-top: 20px;
-    font-size: 20px;
+    color: #008b8b;
+    /* margin-top: 20px; */
+    font-size: 16px;
     background-color: #fff;
     width: 50px;
     height: 50px;
@@ -512,7 +514,7 @@ nav a:hover{
     justify-content: center;
     display: flex;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 .row:hover{
     transform:  scale(1.1);
@@ -797,6 +799,9 @@ nav a:hover{
         margin-top: 20px;
     }
 
+    .technical-bar{width: 50%;}
+    .skill-content{padding: 0;}
+
     .portfolio-content{ gap: 10px;}
     .portfolio-content .layer{padding:  0 15px ;}
     .layer h5{font-size: 12px; margin-bottom: 5px; padding-top: 6px;}
@@ -854,6 +859,8 @@ nav a:hover{
     }
 
 
+    .technical-bar{width: 300px;}
+
     .portfolio-content{ gap: 10px;}
     .portfolio-content .layer{padding:  0 15px ;}
     .layer h5{font-size: 20px; margin-bottom: 5px; padding-top: 6px;}
@@ -883,12 +890,15 @@ nav a:hover{
     grid-gap: 30px;
 }
 
-
 .services-list{grid-gap: 20px;}
 .services-list .fa-code{font-size: 40px; margin-bottom: 25px;}
 .services-list div{padding: 20px;}
 .services-list div p {font-size: 12px;}
 .services-list div h2 {font-size: 25px;}
+
+
+.technical-bar{width: 500px;}
+
 
 .portfolio-content{ gap: 20px;}
     .portfolio-content .layer{padding:  0 15px ;}
