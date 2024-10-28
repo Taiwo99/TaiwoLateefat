@@ -80,7 +80,7 @@ nav a:hover{
 }
 .home-content{
     width: 100%;
-    margin-top: 9%;
+    margin-top: 4%;
     display: grid;
     grid-template-columns:  repeat(2, 1fr);
     height: auto;
@@ -202,8 +202,7 @@ nav a:hover{
 .about-content p{
     font-size: 16px;
     line-height: 1.4;
-    margin-top: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 30px;
 }
 
 /* services */
@@ -748,7 +747,7 @@ nav a:hover{
     .row{margin-bottom: 25px;}
     .layer h5{font-size: 25px;}
     .layer p{font-size: 12px; margin-top: 5px;}
-    .layer a{ width: 50px; height: 50px; margin-bottom: 10px; margin-top: 4px;}
+    .layer a{ width: 50px; height: 50px; margin-bottom: 10px; margin-top: 12px;}
     .layer a i{font-size: 16px; padding: 10px; color: #008b8b;}
 
     #contact{display: block;}
@@ -760,7 +759,7 @@ nav a:hover{
 
 
 }   
-@media (min-width:576px) and (max-width:767px) {
+@media (min-width:576px) and (max-width:768px) {
     nav{
         display: none;
     }
@@ -805,8 +804,8 @@ nav a:hover{
     .portfolio-content{ gap: 10px;}
     .portfolio-content .layer{padding:  0 15px ;}
     .layer h5{font-size: 12px; margin-bottom: 5px; padding-top: 6px;}
-    .layer p{font-size: 8px; margin-top: 5px;}
-    .layer a{font-size:6px; width: 30px; height: 30px; margin-bottom: 5px;}
+    .layer p{font-size: 8px; margin-top: 10px;}
+    .layer a{font-size:10px; width: 40px; height: 40px; margin-top: 5px; margin-bottom: 5px; padding: 4px;}
 
     .contact-text h5{ font-size: 15px; margin: 20px 0;}
     .contact-text p{ font-size: 10px; line-height: 20px;}
@@ -817,7 +816,9 @@ nav a:hover{
 }   
 @media (min-width:768px) and (max-width:991px) {
    
-     .header-container h1{font-size: 25px;}
+    .header-container{
+        padding: 1rem 5%;
+    }
     .nav a{
         font-size: 16px;
         margin-left: 20px;
@@ -832,6 +833,8 @@ nav a:hover{
     .services-content h1, .skill-section h1, .main-text h2, .contact-text h1, .about-content h2{
         font-size: 40px;
     }
+    
+    .home-content{margin-top: 50px;}
     .contact-text h1{ padding-bottom: 10px;}
     .home-container h3{font-size: 20px;}
     .home-container h1{font-size: 40px;}
