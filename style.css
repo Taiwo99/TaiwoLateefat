@@ -9,18 +9,7 @@ body{
     color: #fff;
     background-color: #000d0e;
 }
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 80px;
-    background: transparent;
-    z-index: 100;
-    background-color:#008b8b;
-    margin-bottom: 20px;
-}
-/* #008b8b */
+
 
 .flex{
     display: flex;
@@ -39,12 +28,22 @@ a{
 ul li{
     list-style: none;
 }
+header{
+    position: fixed;
+    background-color:#008b8b; 
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 80px;
+     z-index: 100;
+}
 .header-container{
     width: 100%;
     padding: 1rem 10%;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-
+    top: 0;
 }
 .logo{
     position: relative;
@@ -54,29 +53,46 @@ ul li{
     opacity: 0;
     animation:  slideRight 1s ease forwards;
 }
-nav a{
-    display: inline-block;
+.nav{
+   display: inline-block;
+   align-items: center;
+   justify-content: space-between;
+}
+.nav a{
     font-size: 20px;
     color: #fff;
     font-weight: 500;
-    margin-left: 35px;
     transition: .3s;
     opacity: 0;
+    margin-right: 35px;
     animation: slideTop .5s ease forwards;
 }
-nav a:hover{
+.nav a:hover{
     color: CYAN;
 }
+
+.ham-menu{
+    display: none;
+    cursor: pointer;
+}
+.ham-menu span{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+}
 /* home */
-.home, .about, .services, .skill, .portfolio, .contact{
+.home, .about, .services, .skill, .portfolio, .contact, footer{
     flex-wrap: wrap;
     position: relative;
     width: 100%;
     align-items: center;
 }
-.home-section, .about-section, .services-section, .skill-section,.portfolio-section, .contact-section{
+.home-section, .about-section, .services-section, .skill-section, .portfolio-section, .contact-section, .footer-section{
     padding: 1rem 10%;
     margin-top: 8%;
+    width: 100%;
 }
 .home-content{
     width: 100%;
@@ -205,14 +221,14 @@ nav a:hover{
     margin-bottom: 30px;
 }
 
-/* services */
+/* services */      
 
 .services-content h1, .skill-section h1, .main-text h2, .contact-text h1{
   text-align: center;
   font-size: 54px;
   padding-bottom: 70px;
 }
-.services-content span, .skill-section h1 span, .main-text h2 span, .contact-text h1 span{
+.services-content span, .skill-section h1 span, .main-text h2 span, .contact-text h1 span,.footer-section span{
     color: #0af;
 }
 .services-list{
@@ -240,6 +256,9 @@ nav a:hover{
   color: #0af;
   font-size: 50px;
   margin-bottom: 30px;
+}
+.services-list p{
+    line-height: 20px;
 }
 .services-list div .read, .contact-form .send{
     color: #001b20;
@@ -269,186 +288,15 @@ nav a:hover{
 }
 #skills{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     height: 100%;
+        
 }
-.skill-content{
-    width: 100%;
-    height: auto;
-    padding: 20px;
+.skill-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
-.heading1{
-    text-align: center;
-    text-decoration: underline;
-    text-underline-offset: 14px;
-    text-decoration-thickness: 5px;
-    margin-bottom: 50px;
-}
-.technical-bar{
-    width: 100%;
-}
-.bar{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.technical-bar .bar{
-    margin-top: 40px 0;
-}
-.technical-bar .bar:first-child{
-    margin-top: 0;
-}
-.technical-bar .bar:last-child{
-    margin-bottom: 0;
-}
-.technical-bar .bar .info{
-    margin-bottom: 5px;
-}
-.technical-bar .bar .info span{
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-.technical-bar .bar .progress-line{
-    position: relative;
-    border-radius: 10px;
-    width: 100%;
-    height: 5px;
-    background-color: #000000;
-    animation:  animate 1s cubic-bezier(1,0,0.5,1) forwards;
-    transform:  scaleX(0);
-    transform-origin: left;
-}
- .technical-bar .bar .progress-line span{
-    height: 100%;
-    background-color: #0af;
-    position: absolute;
-    border-radius: 10px;
-    animation: animate 1s  1s cubic-bezier(1,0,0.5,1) forwards;
-    transform: scaleX(0);
-    transform-origin: left;
-} 
-.bar .progress-line.html span{
-    width: 90%; 
-}
-.progress-line.css span{
-    width: 60%;
-}
-.progress-line.javascript span{
-    width: 80%;
-}
-.progress-line.react span{
-    width: 80%;
-}
-.progress-line.ui span{
-    width: 75%;
-}
-.progress-line span::after{
-    position: absolute;
-    padding: 1px 8px;
-    background-color: #000;
-    color: #fff;
-    font-size: 12px;
-    border-radius: 3px;
-    top: -28px;
-    right: -20px;
-    animation: showText 0.5s 1.5s linear forwards;
-    opacity: 0;
-}
-.progress-line.html span::after{
-    content: "90%";
-}
-.progress-line.css span::after{
-    content: "60%";
-}
-.progress-line.javascript span::after{
-    content: "75%";
-}
-.progress-line.react span::after{
-    content: "80%";
-}
-.progress-line.ui span::after{
-    content: "850%";
-}
-.progress-line span::before{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 7px solid transparent;
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-top-color: #000;
-    top: -10px;
-    right: 0;
-    animation: showText 0.5s 1.5s ;
-}
-
-.radical-bars{
-     width: 100%;
-     height: 100%;
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     position: relative;
-     gap: 30px;
-     margin-bottom: 10px;
-     padding:  0 20px 20px;
-}
-.radical-bars .radical-bar{
-    width: 100%;
-    height: 140px;
-    position: relative;
-}
-.radical-bars .radical-bar svg{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    height:  100%;
-    width: 100%;
-}
-.radical-bars .radical-bar .progress-bar{
-    stroke-width: 10;
-    stop-color: #000;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502;
-    stroke-linecap: round;
-    animation: animate-bar 1s linear forwards;
-}
-.path{
-    stroke-width: 10;
-    stroke: #0af;
-    stroke-dashoffset: 502;
-    stroke-dasharray: 502;
-    stroke-linecap: round;
-
-}
-.path-1{animation: animate-path1 1s 1s linear forwards;}
-.path-2{animation: animate-path2 1s 1s linear forwards;}
-.path-3{animation: animate-path3 1s 1s linear forwards;}
-.path-4{animation: animate-path4 1s 1s linear forwards;}
-
-.radical-bar .parcentage{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-}
-.radical-bar .text{
-    width: 100%;
-    position: absolute;
-    text-align: center;
-    left: 50%;
-    bottom: -20%;
-    transform:  translateX(-50px);
-    font-size: 16px;
-    font-weight: 500;
-    animation: showText 0.5 1s linear forwards;
+.skill-list i{
+    font-size: 70px;
 }
 
 
@@ -469,6 +317,7 @@ nav a:hover{
 }
 .row img{
     width: 100%;
+    height: 200px;
     border-radius: 8px;
     display: block;
     transition: transform 0.5s;
@@ -499,7 +348,7 @@ nav a:hover{
 }
 .layer p{
     color: #000;
-    font-size: 16px;
+    font-size: 12px;
     width: 100%;
 }
 .layer a{
@@ -507,8 +356,8 @@ nav a:hover{
     /* margin-top: 20px; */
     font-size: 16px;
     background-color: #fff;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -537,7 +386,7 @@ nav a:hover{
     color: #fff;
     margin:  35px 0;
 }
-.contact-text p{
+.contact-text p, .footer-section h4{
     color: rgb(177, 177, 177);
     font-size: 16px;
     line-height: 30px;
@@ -604,7 +453,7 @@ nav a:hover{
     padding: 14px 40px;
     font-size: 16px;
 }
-
+.footer-section{padding-bottom: 0;}
 
 
 @keyframes animate-path1 {
@@ -686,14 +535,42 @@ nav a:hover{
 
 
 @media (max-width:575px) {
-        .image-container, .image-container img{
+
+
+    .ham-menu{
+        display: block;
+    }
+    .ham-menu.active span:nth-child(2){
+        opacity: 0;
+    }
+    .ham-menu.active span:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .ham-menu.active span:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg);
+    }
+    .nav{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        display: flex;
+        flex-direction: column;
+        background-color: #008b8b;
+        width: 100%;
+        align-items: center;
+        transition:  .3s;
+    }
+    .nav a{
+        margin: 16px 0;
+    }
+    .nav.active{
+        left: 0;
+    }
+
+    .image-container, .image-container img{
         width:  200px;
         height: 200px;
     }
-    nav {
-        display: none;
-    }
-   
     .img-con{
         margin-top: 30px;
         justify-content: center;
@@ -711,13 +588,17 @@ nav a:hover{
         font-size: 30px;
         padding-bottom: 50px;
     }
-   
+
+    .skill-list i{
+        font-size: 30px;
+    }
+
     .contact-text h1{ padding-bottom: 10px;}
     .home{margin-top: 50px;}
     .home-container h3{font-size: 14px;}
     .home-container h1{font-size: 30px;}
     .home-container p{font-size: 12px; padding-top: 8px;}
-    .home-sci a{width: 30px; height: 30px; margin-top: 10px; margin-bottom: 20px;}
+    .home-sci a{width: 30px; height: 30px; margin-top: 10px; margin-bottom: 20px; font-size: 12px;}
     .btn-box{padding: 10px 15px; font-size: 12px;}
 
     .about-content h2, .contact-text h1{padding-bottom: 0;}
@@ -739,9 +620,8 @@ nav a:hover{
 
    
     #skills{display: block;}
-    .skill-content{padding: 0;}
-    .skill-content .technical-bar{margin-bottom: 50px;}
-
+    /* .skill-content{padding: 0;} */
+    
     .portfolio-content{display: block;}
     .row:hover{transform: scale(1);}
     .row{margin-bottom: 25px;}
@@ -752,17 +632,49 @@ nav a:hover{
 
     #contact{display: block;}
     .contact-text h4{ font-size: 18px; margin: 20px 0;}
-    .contact-text p{ font-size: 10px; line-height: 20px;}
+    .contact-text p{ font-size: 12px; line-height: 20px;}
     .contact-list{ margin-bottom: 2rem;}
     .contact-list a{font-size: 14px;}
     .contact-form{margin-top: 20px;}
 
+    .footer-section h4{
+        font-size: 12px;
+    }
 
 }   
 @media (min-width:576px) and (max-width:768px) {
-    nav{
-        display: none;
+   
+    .ham-menu{
+        display: block;
     }
+    .ham-menu.active span:nth-child(2){
+        opacity: 0;
+    }
+    .ham-menu.active span:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .ham-menu.active span:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg);
+    }
+    .nav{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #008b8b;
+        width: 100%;
+        align-items: center;
+        transition:  .3s;
+    }
+    .nav a{
+        margin: 16px 0;
+    }
+    .nav.active{
+        left: 0;
+    }
+
     .home-section, .about-section, .services-section, .skill-section,.portfolio-section, .contact-section{
         padding: 5px 5%;
     }
@@ -773,6 +685,9 @@ nav a:hover{
     .services-content h1, .skill-section h1, .main-text h2, .contact-text h1, .about-content h2{
         font-size: 25px;
         padding-bottom: 40px;
+    }
+    .skill-list i{
+        font-size: 30px;
     }
     .about-content h2, .contact-text h1{
         padding-bottom: 0;
@@ -842,7 +757,10 @@ nav a:hover{
     .home-sci a{width: 30px; height: 30px;}
     .about-content h4{font-size: 18px; margin: 12px 15px 0;}
     .about-content p{font-size: 14px; margin-bottom: 20px; }
-
+ 
+    .skill-list i{
+        font-size: 50px;
+    }
     .services-list{
         grid-gap: 20px;
     }

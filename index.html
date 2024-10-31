@@ -12,17 +12,24 @@
 </head>
 <body>
     <header class="flex">
-        <div class="header-container flex">
+        <div class="header-container">
             <h1>Front-Dev</h1>
         
-           <nav>
+           <nav class="nav">
                 <a href="#home" style=" --i:1" class=" active navbar">Home</a>
                 <a href="#about" style=" --i:2" class="navbar">About</a>
                 <a href="#service" style=" --i:3" class="navbar">Skill</a>
                 <a href="#portfolio" style=" --i:4" class="navbar">Portfolio</a>
                 <a href="#Contact" style=" --i:5" class="navbar">Contact</a>
            </nav>
+
+           <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
+        
     </header>
 
     <section>
@@ -107,91 +114,17 @@
 
       <div class="skill flex" id="skill">
         <div class="skill-section">
-            
-            <div class="skill-con">
+             <div class="skill-con">
                 <h1>My <span>Skill</span></h1>
                 <section id="skills">
-                
-                    <div class="skill-content">
-                        <h2 class="heading1">Technical Skills</h2>
-                        <div class="technical-bar">
-                            <div class="bar">
-                                <a href="#" class="fa-brands fab fa-html5 code" style="color: #e34f26;"></a>
-                                <div class="info">
-                                    <span>HTML</span>
-                                </div>
-                                <div class="progress-line html">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="bar">
-                                <a href="#" class="fa-brands fab fab fa-css3 code" style="color: #264de4;"></a>
-                                <div class="info">
-                                    <span>CSS</span>
-                                </div>
-                                <div class="progress-line css">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="bar">
-                                <a href="#" class="fa-brands fab fab fa-js-square code" style="color: #f7df1e;"></a>
-                                <div class="info">
-                                    <span>Javascript</span>
-                                </div>
-                                <div class="progress-line javascript">
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="bar">
-                                <a href="#" class="fa-brands fab fab fa-react code" style="color: #61dafb;"></a>
-                                <div class="info">
-                                    <span>React</span>
-                                </div>
-                                <div class="progress-line react">
-                                    <span></span>
-                                </div>
-                            </div>
-                            
+                        <div class="skill-list flex">
+                            <i class="fa-brands fa-js" style="color: #f7df1e;"></i>
+                            <i class="fas fab fa-react" style="color: #61dafb;"></i>
+                            <i class="fas fab fab fa-html5" style="color: #e34f26;"></i>
+                            <i class="fas fab fab fa-css3" style="color: #264de4;"></i>
+                            <i class="fas fab fab fab fa-bootstrap" style="color: #7952b3;"></i>
                         </div>
-                    </div>
-                    <div class="skill-content">
-                        <h2 class="heading1">Professional Skills</h2>
-                        <div class="radical-bars">
-                            <div class="radical-bar">
-                             <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                             </svg>
-                             <div class="parcentage">90%</div>
-                             <div class="text">Creativity</div>
-                            </div>
-                            <div class="radical-bar">
-                             <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                             </svg>
-                             <div class="parcentage">65%</div>
-                             <div class="text">Communication</div>
-                            </div>
-                            <div class="radical-bar">
-                             <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                             </svg>
-                             <div class="parcentage">75%</div>
-                             <div class="text">Problem Solving</div>
-                            </div>
-                            <div class="radical-bar">
-                             <svg x="0px" y="0px" viewBox="0 0 200 200">
-                                <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
-                                <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                             </svg>
-                             <div class="parcentage">85%</div>
-                             <div class="text">Team Work</div>
-                            </div>
-                       </div>
-                    </div>
-                </section>
+                    </section>
             </div>
             
         </div>
@@ -207,24 +140,24 @@
                     <div class="row">
                        <img src="img/mucis.jpg" alt=""> 
                        <div class="layer">
-                        <h5>Ui/Ux Design</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum tempore quae in omnis magni libero magnam sunt.</p>
+                        <h5>MovieBox</h5>
+                        <p>his site harnesses the power of JavaScript to deliver dynamic, real-time content using integrated APIs, providing users with an interactive and engaging experience</p>
                         <a href="#"><i class=" fa fa-arrow-right"></i></a>
                        </div>
                     </div>
                     <div class="row">
-                       <img src="img/mucis.jpg" alt=""> 
+                       <img src="img/download.jfif" alt=""> 
                        <div class="layer">
-                        <h5>Ui/Ux Design</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum tempore quae in omnis magni libero magnam sunt.</p>
+                        <h5>Vite website clone</h5>
+                        <p>This project is a high-performance clone of a Vite-powered website, leveraging the speed and efficiency of Vite's modern development framework</p>
                         <a href="#"><i class=" fa fas fas fa-arrow-right"></i></a>
                        </div>
                     </div>
                     <div class="row">
-                       <img src="img/mucis.jpg" alt=""> 
+                       <img src="img/download (1).jfif" alt=""> 
                        <div class="layer">
-                        <h5>Ui/Ux Design</h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora voluptatum tempore quae in omnis magni libero magnam sunt.</p>
+                        <h5>Jumia Web Clone </h5>
+                        <p>his project is a feature-rich clone of the Jumia e-commerce platform, built to mirror the smooth user experience and responsive design of the original</p>
                         <a href="#"><i class=" fa fas fas fas fa-arrow-right"></i></a>
                        </div>
                     </div>
@@ -265,7 +198,13 @@
           </div>
         </div>
     </section>
-    <footer></footer>
+
+
+    <footer>
+        <div class="footer-section flex">
+            <h4>Made with love <span><i class="fas far fa-copyright"></i> 2024.</span>  Taiwo lateefat</h4>
+        </div>
+    </footer>
 
 
 
